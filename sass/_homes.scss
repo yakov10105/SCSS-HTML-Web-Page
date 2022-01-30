@@ -1,0 +1,64 @@
+.homes{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap: 7rem;
+    padding: 10rem;
+
+    .home{
+        display: grid;
+        background-color: $color-grey-light-1;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 3.5rem;
+        .home-img{
+            width: 100%;
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+            z-index: 1;
+        }
+        .home-heading-5{
+            grid-row: 1 / 2;
+            font-size: 1.5rem;
+            grid-column: 1 / -1;
+            justify-self: center;
+            align-self: flex-end;
+            background-color: darkslategrey;
+            color: white;
+            z-index: 5;
+            width: 80%;
+            text-align: center;
+            height: fit-content;
+            padding: 1.5rem;
+            transform: translateY(50%);
+        }
+        .property{
+            font-size: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: flex-start;
+        }
+        .btn{
+            grid-column: 1/-1;
+        }
+    }
+}
+@media screen and(max-width:$bp-medium) {
+    .homes{
+        grid-template-columns:1fr;
+        grid-gap: 3.5rem;
+        padding: 5rem;
+        .home-img{
+            width: 50%;
+        }
+    }
+}
+@media screen and(min-width:$bp-medium) and(max-width:$bp-large) {
+    .homes{
+        grid-template-columns:1fr 1fr;
+        grid-gap: 2rem;
+        padding: 5rem;
+        .home-img{
+            width: 40%;
+        }
+    }
+}
